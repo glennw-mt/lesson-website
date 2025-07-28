@@ -53,10 +53,9 @@ const Blog = ({ data }) => {
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
           />
-          </Content>
-          
-          <div
+            <div
               sx={{
+                position: `absolute`,
                 display: `grid`,
                 top: `60vh`,
                 gridGap: [4, 4, 4, 5],
@@ -77,6 +76,9 @@ const Blog = ({ data }) => {
                 />)
               })}
             </div>
+          </Content>
+          
+          
         </div>
       </Parallax>
     </Layout>
