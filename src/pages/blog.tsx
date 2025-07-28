@@ -49,13 +49,15 @@ const Blog = ({ data }) => {
           </Divider>
           <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={0} factor={1}>
             <h1>Blog</h1>
-            <BlogSearch
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-            />
-            <div
+          </Content>
+          <BlogSearch
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
+          <div
               sx={{
                 display: `grid`,
+                top: `60vh`,
                 gridGap: [4, 4, 4, 5],
                 gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
               }}
@@ -74,7 +76,6 @@ const Blog = ({ data }) => {
                 />)
               })}
             </div>
-          </Content>
         </div>
       </Parallax>
     </Layout>
