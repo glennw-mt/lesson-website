@@ -16,7 +16,7 @@ const BlogCard = ({ link, title, date, children, bg }: BlogCardProps) => (
     sx={{
       marginBottom: "4px",
       height: `100%`,
-      width: `100%`,
+      width: `80vw`,
       boxShadow: `lg`,
       display: `flex`,
       flexDirection: `column`,
