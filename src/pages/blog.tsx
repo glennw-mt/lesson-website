@@ -49,11 +49,12 @@ const Blog = ({ data }) => {
           </Divider>
           <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={0} factor={1}>
             <h1>Blog</h1>
-          </Content>
-          <BlogSearch
+            <BlogSearch
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
           />
+          </Content>
+          
           <div
               sx={{
                 display: `grid`,
