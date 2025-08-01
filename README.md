@@ -1,115 +1,266 @@
-<!-- <p align="center">
-  <a href="https://cara.lekoarts.de">
-    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Starter Portfolio: Cara
-</h1>
+# Hugo Serif Theme
 
-<p align="center">
-  <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-0BSD-blue.svg" alt="Gatsby Starter Portfolio: Cara is released under the 0BSD license." />
-  </a>
-  <a href="https://github.com/sponsors/LekoArts">
-    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/LekoArts">
-  </a>
-  <a href="https://www.lekoarts.de?utm_source=cara&utm_medium=Starter">
-    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
-  </a>
-<a href="https://bsky.app/profile/lekoarts.de">
-  <img src="https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff" alt="Follow @lekoarts.de" />
-</a>
-</p>
+Serif is a modern business theme for Hugo. It contains multiple content types and pages. The theme is fully responsive, blazing fast and artfully illustrated.
 
-Playful and Colorful One-Page portfolio featuring Parallax effects and animations. Using the Gatsby Theme [`@lekoarts/gatsby-theme-cara`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-cara).
+[Live Demo](https://hugo-serif.netlify.app/) |
+[Zerostatic Themes](https://www.zerostatic.io/)
 
-[**Demo Website**](https://cara.lekoarts.de)
+![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
 
-Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=cara&utm_medium=Starter).
+## Features
 
-## ✨ Features
+**Content Types**
 
-- Theme UI-based theming
-- react-spring Parallax Effect
-- CSS Animations on Shapes
+- Services (Markdown)
+- Team (Markdown)
+- Features (Data)
 
-## ⏱️ Quick Start
+**CSS**
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+- SCSS (Hugo Pipelines)
+- Fully Responsive design
+- Bootstrap 4 grid and media queries only
+- Uncomment `@import 'bootstrap/bootstrap';` in `style.scss` to use the entire Bootstrap framework
+- Configure Google fonts from `config.toml`
+- Configure primary theme colors from `config.toml`
+- Examples of using Params from the `config.toml` as SCSS variables
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-portfolio-cara)
+**Speed**
 
-## 🚀 Getting Started
+- 100/100 Google Lighthouse speed score
+- Under 50KB without images or 80KB with images and illustrations ⚡
+- No jQuery, only a tiny bit of vanilla Javascript for the mobile menu.
 
-### 1. **Create a Gatsby site.**
+**SEO**
 
-Use the Gatsby CLI to clone the site and install dependencies:
+- 100/100 Google Lighthouse SEO score
+- 100/100 Google Lighthouse accessibility score
+- Configure Google Analytics in `config.toml`
+- Configure Google Analytics using env variable `HUGO_GOOGLE_ANALYTICS_ID` compatible with Netlify.
+- Configure meta tags and OG meta tags for the homepage in `config.toml`
+- Override any meta tags on a per page basis
+- Semantic HTML document structure
 
-```sh
-npx gatsby new gatsby-starter-portfolio-cara https://github.com/LekoArts/gatsby-starter-portfolio-cara
+**Menu**
+
+- Responsive menu managed in `config.toml`
+- Animated hamburger menu on mobile
+
+**Content**
+
+- Robust example content included
+- Royalty free illustrations included
+
+**Code**
+
+- No hardcoded content in the layouts
+- Plenty of examples of using `range` and `where` to loop over various sections/content types
+- Examples of `range` by Param
+- Examples of using data content _(`data/contact.yaml` and `data/features.json`)_
+- Example of passing .Site . (context) and custom variables to partials - see `layouts/page/contact.html` - `{{ partial "call.html" (dict "site" .Site "context" . "show_button" "false") }}`
+- Examples of injecting javascript files on a per page basis (see `services/single.html`)
+- Set `body` classes from individual layouts - useful for CSS styling.
+- Example of using Hugo custom `layout` for the contact page
+
+## Installation
+
+**1. Install Hugo**
+
+To use this theme you will first need to have Hugo installed. Please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
+
+⚠️ **Note:** Check your Hugo version - **Hugo Extended** is required!
+
+This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets which means if you not using the Hugo extended version this theme will not work. To check your version of Hugo, run `hugo version`. Make sure you see **/extended** after the version number, for example _Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown_ You do not need to use version v0.51 specifically, it just needs to have the _/extended_ part.
+
+**2. Create a new Hugo site**
+
+This will create a fresh Hugo site in the folder `mynewsite`.
+
+```
+hugo new site mynewsite
 ```
 
-### 2. **Navigate to your new project.**
+**3. Install the theme**
 
-```sh
-cd gatsby-starter-portfolio-cara
+Download or git clone this theme into the sites themes folder `mynewsite/themes`. You should end up with the following folder structure `mynewsite/themes/hugo-serif-theme`
+
+```
+cd mynewsite
+git clone https://github.com/zerostaticthemes/hugo-serif-theme.git themes/hugo-serif-theme
 ```
 
-### 3. **Open the code and start customizing!**
+**4. Copy the example content**
 
-Start the site by running `npm run develop`.
+Copy the entire contents of the `mynewsite/themes/hugo-serif-theme/exampleSite/` folder to root folder of your Hugo site, ie `mynewsite/`. To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
 
-Your site is now running at `http://localhost:8000`!
-
-If you want to learn more about how you can use a Gatsby starter that is configured with a Gatsby theme, you can check out this [shorter](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/using-a-gatsby-theme/) or [longer](https://www.gatsbyjs.com/tutorial/using-a-theme/) tutorial. The tutorials don't exactly apply to this starter however the concepts are the same.
-
-## 📝 Using and modifying this starter
-
-**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the underlying theme!
-
-This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-cara`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-cara).
-
-Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-cara/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
-
-### Changing content
-
-The content of this project is defined in four `.mdx` files inside the theme's `sections` folder. You can override the files `intro.mdx`, `projects.mdx`, `about.mdx` and `contact.mdx`. This starter has overridden all files for you already.
-
-You have to use the `<ProjectCard />` component inside `projects.mdx` to display the cards. Example:
-
-```md
-## Projects
-
-<ProjectCard title="Freiheit" link="https://www.behance.net/gallery/58937147/Freiheit" bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)">
-This project is my entry to Adobe's #ChallengeYourPerspective contest.
-</ProjectCard>
+```
+cp -a themes/hugo-serif-theme/exampleSite/. .
 ```
 
-### Change your `static` folder
+**5. Run Hugo**
 
-The `static` folder contains the icons, social media images and `robots.txt`. Don't forget to change these files, too! You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate the image files inside `static`.
+After installing the theme for the first time, generate the Hugo site.
 
-## 🤔 Questions or problems?
+You run this command from the root folder of your Hugo site ie `mynewsite/`
 
-If you have general questions or need help with Gatsby, please go to one of the [support platforms](https://www.gatsbyjs.com/contributing/community/#where-to-get-support) mentioned in Gatsby's documentation. If you have a specific question about this project, you can head to the [GitHub Discussions](https://github.com/LekoArts/gatsby-themes/discussions) of the repository.
+```
+hugo
+```
 
-## 🎓 Learning Gatsby
+For local development run Hugo's built-in local server.
 
-Looking for more guidance? Full documentation for Gatsby lives [on Gatsby's website](https://www.gatsbyjs.com/).
+```
+hugo server
+```
 
-### Themes
+Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
-To learn more about Gatsby themes specifically, I recommend checking out the [theme docs](https://www.gatsbyjs.com/docs/themes/).
+## Deployment
 
-### General
+### Netlify
 
-- **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/hugo-serif-theme)
 
-- **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _How-to Guides_ and _Reference_ items in the primary navigation.
+This theme includes a `netlify.toml` which is [configured to deploy to Netlify](https://discourse.gohugo.io/t/deploy-your-theme-to-netlify/15508) from the `exampleSite` folder. If you have installed this theme into a new Hugo site and the exampleSite folder was copied or removed, you should delete the `netlify.toml` file.
 
-## 🌟 Supporting me
+### Localhost inside exampleSite
 
-Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Bluesky](https://bsky.app/profile/lekoarts.de) and share the project with me.
+You can run this site without installing it as a hugo theme using the following command. I use this for theme development.
 
-Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)! -->
+```
+hugo server --source=exampleSite --theme=../..
+```
+
+## Configuring Theme
+
+### Logo
+
+You can edit the logo from the `config.toml`
+
+```toml
+# config.toml
+
+  [params.logo]
+    mobile = "images/logo/logo-mobile.svg"
+    mobile_height = "36px"
+    desktop = "images/logo/logo.svg"
+    desktop_height = "36px"
+    alt = "Serif - A Hugo Business Theme"
+```
+### Favicon
+
+You can edit the favicon from the `config.toml`
+
+```toml
+# config.toml
+
+[params]
+  google_analytics_id = "UA-XXX-1"
+  google_tag_manager_id = ""
+  favicon = "favicon-32x32.svg"
+```
+
+### Fonts
+
+This theme uses Google fonts. You can change the google font in the `config.toml` - These fonts are injected into the `style.scss` as SCSS variables.
+
+```toml
+# config.toml
+
+  [params.fonts]
+    # sets the google font link in layouts/partials/google-fonts.html
+    google_fonts = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro:wght@400;700&display=swap'
+    heading = "Playfair Display"
+    base = "Source Sans Pro"
+```
+
+### Colors
+
+You can edit the themes main colors in the `config.toml`. These colors are injected into the `style.scss` as SCSS variables.
+
+```toml
+#config.toml
+
+  [params.colors]
+    primary = "#f24088"
+    black = "#2f2f41"
+    white = "#ffffff"
+    white_offset = "#f6f7ff"
+    grey = "#5C5A5A"
+```
+
+### Intro Image
+
+List pages such as the homepage, services and team can have a Intro image.
+
+```yml
+# content/_index.md
+---
+intro_image: "https://source.unsplash.com/wOGhHamMqLc"
+intro_image_absolute: false
+intro_image_hide_on_mobile: true
+---
+```
+
+While this themes default content uses illustrations, its easy to change the image to a photo and it will still look great.
+
+the front-matter field `intro_image_absolute: true` let's illustrations "break out" (in CSS terms, it uses `position: absolute`) of the grid and is an intended stylistic effect. When using photos or normal images it's recommended to set this field to false and the photo will align with the grid. See `content/team/_index.md` for an example.
+
+### Google Analytics
+
+Put your Google Analytics ID in the `google_analytics_id` field in the `config.toml` - Also supports Google Tag Manager. When your site is running locally using `hugo server` the GA tag is not injected. This prevents polluting your real data.
+
+```toml
+# config.toml
+
+[params]
+  google_analytics_id = "UA-XXX-1"
+  google_tag_manager_id = ""
+```
+
+You can also set the Google Analytics ID using a [Netlify environment variable](https://docs.netlify.com/configure-builds/environment-variables/) `HUGO_GOOGLE_ANALYTICS_ID`
+
+### Meta tags
+
+A pages `<title>` is generated from the front-matter `meta_title` else it will use the `title` property. This allows you to have a different heading on the page to what is shown in the SEO title. See `content/_index.md` for an example.
+
+The meta description field is generated from the front-matter `description`
+
+OG meta data for Facebook and Twitter is also generated on a per page basis. The `image` field is used for the og:image for Twitter and Facebook.
+
+You can configure og meta data global settings in the config.
+
+```toml
+# config.toml
+
+  [params.seo]
+    meta_twitter_site = "@zerostaticio"
+    meta_twitter_creator = "@zerostaticio"
+    meta_og_image = "https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png"
+```
+
+## License
+
+- Don't create ports of this theme without asking me
+- You can't re-distribute or re-sell this theme as your own template
+
+## Credits
+
+- Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
+- Stock images by Unsplash - https://unsplash.com/
+- Feature icons by Noun Project - https://thenounproject.com/
+
+**More Hugo Themes by Zerostatic**
+
+- [Hugo Hero](https://github.com/zerostaticthemes/hugo-hero-theme) - Open-source business theme
+- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme) - Open-source documentation theme
+- [Hugo Serif](https://github.com/zerostaticthemes/hugo-serif-theme) - Open-source business theme
+- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme) - Open-source blog theme
+- [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/) - Premium advanced multi page business & marketing theme
+- [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/) - Premium landing page + site builder theme
+- [Hugo Lever](https://www.zerostatic.io/theme/hugo-lever/) - Premium personal / bio theme
+- [Hugo Shard](https://www.zerostatic.io/theme/hugo-lever/) - Premium SAAS / landing page theme
+
+**Find hundreds more Hugo themes on Built At Lightspeed**
+
+[<img alt="Built At Lightspeed Hugo themes directory screenshot" width="400px" src="https://www.zerostatic.io/images/builtatlightspeed-hugo-themes.jpg" />](https://builtatlightspeed.com/category/hugo)
