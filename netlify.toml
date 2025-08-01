@@ -1,5 +1,5 @@
 [build]
-  publish = "kathleen-tutoring/public"
+  publish = "public"
   command = "hugo --gc"
 
 [build.environment]
