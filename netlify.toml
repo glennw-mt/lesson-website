@@ -4,5 +4,5 @@
 
 [build.environment]
   HUGO_VERSION = "0.132.0"
-  HUGO_THEME = "/themes/hugo-serif-theme"
+  HUGO_THEME = "themes/hugo-serif-theme"
   HUGO_BASEURL = "/"
