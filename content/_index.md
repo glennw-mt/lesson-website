@@ -10,4 +10,4 @@ intro_image_hide_on_mobile: false
 
 # Hi, I'm Kathleen
 
-I'm offering private lessons in O'level Mathematics and Physics. Contact me for more information.
+I'm offering private lessons in primary school to secondary school level Mathematics and Physics. Contact me for more information.
