@@ -42,23 +42,11 @@
 </div>
 {{end}}
 
-<div class="grey-box">
-  <h2>Welcome!</h2>
-  <p>This is a grey box with some text inside. You can add headings, paragraphs, or even links and images here.</p>
 </div>
-
-<style>
-  .grey-box {
-    background-color: #e0e0e0;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    margin: 20px auto;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-</style>
-
+    {{ if .Site.Params.homepage.show_contact_box }}
+    {{ partial "call.html" (dict "site" .Site "context" . "show_button" "true") }}
+    {{ end }}
+</div>
 
 {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
 {{if gt (len $services) 0}}
