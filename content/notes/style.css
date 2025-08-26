@@ -4,12 +4,12 @@
     padding-right: 14px;
     text-align: center;
 }
-div {
-  width: 320px;
-  height: 500px;
-  padding: 25px;
-  border: 25px ;
-  margin: 25px;
-}
+
+    .body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
 
 
