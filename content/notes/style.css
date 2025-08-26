@@ -6,10 +6,10 @@
 }
 
 body {
-  display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center;     /* vertical centering */
+  display: grid;
+  place-items: center; /* shorthand for horizontal and vertical centering */
 }
+
 .page {
   box-sizing: border-box;
   margin: auto;
