@@ -5,9 +5,17 @@
     text-align: center;
 }
 
-body {
-  display: grid;
-  place-items: center; /* shorthand for horizontal and vertical centering */
-}
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
 
+    .page {
+      width: 80%;
+      max-width: 600px;
+      padding: 40px;
+      text-align: center;
+    }
 
