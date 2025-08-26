@@ -22,4 +22,17 @@
     text-align: left !important;
   }
 }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+      gap: 20px; /* Space between columns */
+      padding: 20px;
+    }
+
+    .grid-item {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
 
