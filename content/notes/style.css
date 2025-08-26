@@ -4,6 +4,12 @@
     padding-right: 14px;
     text-align: center;
 }
-
+div {
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px ;
+  margin: 0;
+}
 
 
