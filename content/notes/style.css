@@ -12,5 +12,14 @@
       margin-right: 0%;
       
     }
-
+.intro > .container > .row > *{
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  text-align: center !important;
+  > .call {
+    text-align: left !important;
+  }
+}
 
